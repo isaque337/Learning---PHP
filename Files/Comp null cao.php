@@ -2,10 +2,9 @@
 $idade = '45';
 $idade2 = '20';
 
-if($idade>18) {
+if ($idade > 18) {
     echo "É maior.";
-}
-else {
+} else {
     echo "É menor.";
 }
 
