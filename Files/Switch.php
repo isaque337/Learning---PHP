@@ -1,8 +1,9 @@
 <?php
+//Pequena réplica do facebook.
 
-$tipo = 'video';
+$tipoConteudo = 'video';
 
-switch ($tipo) {
+switch ($tipoConteudo) {
     case 'foto':
         echo 'Exibindo Foto';
         break;

@@ -1,7 +1,6 @@
-<php 
+<?php 
 
 $idade = 18;
 
-if($idade >=18){
-    echo 'Menor '
-}
+echo ($idade >= 18) ? "Entrada liberada ": "Não liberado";  //(condição) ? Resultado Positivo : Resultado negativo
+

@@ -1,12 +1,15 @@
 <?php
-$idade = '45';
-$idade2 = '20';
+$idade = "18";
+$cnh = null;
 
-if ($idade > 18) {
-    echo "É maior.";
-} else {
-    echo "É menor.";
+echo "Idade digitada: ". $idade ."// ";
+
+if ($idade >= 18) {
+    echo "É maior de idade. <br>";
+}else{
+    echo "É menor de idade . <br>";
 }
 
-$total = isset($idade2) ? $idade2 : 'Não tem';
-echo $total;
+$CNH = $cnh ?? "Não tem CNH";
+echo $CNH;
+
