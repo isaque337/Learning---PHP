@@ -1,6 +1,20 @@
-<h1>Cabeçalho do Site</h1>
-<br>
+<!DOCTYPE html>
+<html>
 
-<a href="<?php include("_DIR_.\Files/WebsiteTeste/index.php"); ?>">Início</a>
-<a href="paginas/sobre.php">Sobre</a>
-<hr/>
+<head>
+    <script type="text/javascript" src="js/file.js"></script>
+</head>
+
+<body>
+
+    <h1>Cabeçalho do Site</h1>
+    <br>
+
+    <a href="<?php echo dirname("../index.php"); ?>"> Início</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="<?php echo dirname("sobre.php"); ?>"> Sobre</a>
+    <hr/>
+
+
+</body>
+
+</html>
