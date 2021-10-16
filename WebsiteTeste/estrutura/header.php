@@ -11,7 +11,7 @@
     <br>
 
     <a href="<?php echo dirname("../index.php"); ?>"> Início</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="<?php echo dirname("sobre.php"); ?>"> Sobre</a>
+    <a href="<?php echo dirname("/Learning-PHP/WebsiteTeste/paginas/sobre.php"); ?>"> Sobre</a>
     <hr/>
 
 
