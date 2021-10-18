@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['aviso'])){
+    echo $_SESSION['aviso'];
+    $_SESSION['aviso'] = '';
+}
 
 ?>
 <form method="POST" action="recebe.php">
