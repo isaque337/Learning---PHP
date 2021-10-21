@@ -21,7 +21,7 @@
                         Clientes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="cliente/cadastrar.php">Cadastrar Clientes</a>
+                        <a class="dropdown-item" href="cliente/cadastro.php">Cadastrar Clientes</a>
                         <a class="dropdown-item" href="cliente/gerenciar.php">Gerenciar Clientes</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="cliente/cliente_servico.php">Clientes e Serviços</a>
@@ -32,7 +32,7 @@
                         Serviços
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="servicos/cadastrar.php">Cadastrar Serviços</a>
+                        <a class="dropdown-item" href="servicos/cadastro.php">Cadastrar Serviços</a>
                         <a class="dropdown-item" href="servicos/gerenciar.php">Gerenciar Serviços</a>
                     </div>
                 </li>

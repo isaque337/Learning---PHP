@@ -1,54 +1,16 @@
-<?php require_once("../header.php"); ?>
-
-<head>
-    <title>Cadastrar Serviço</title>
-</head>
-
-
-<br>
-<div class="container">
-
-    <div class="form-group">
-        <div class="col-md-6 offset-md-3 h3">
-            <center>CADASTRAR SERVIÇOS</center>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-
-    <form action="" method="POST" name="formulario">
-
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label> Nome </label>
-                <input type="text" name="nome_servico" class="form-control " placeholder="Digite o nome do serviço" required="" autocomplete="off">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label> Valor</label>
-                <input type="text" name="valor_servico" class="form-control" placeholder="Digite o valor" required="" autocomplete="off">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <input type="hidden" name="status" class="form-control" value="ativo">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
-            </div>
-        </div>
-
-    </form>
-
-</div>
+<?php
+session_start();
+require_once("../conexao.php");
 
 
 
-<?php require_once("../footer.php"); ?>
+if (isset($_POST['nome_servico'])) {
+    $sql = $pdo->prepare("INSERT INTO servicos VALUES (null,null,?,?)");
+    $sql->execute(array($_POST['nome_servico'],$_POST['valor_servico']));
+    $_SESSION['cadastrado'] = 'Inserido com sucesso';
+    header("location:cadastro.php");
+    echo $_SESSION['cadastrado'];
+}else{
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+?>
