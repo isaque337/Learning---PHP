@@ -9,7 +9,6 @@ if (isset($_POST['nome_servico'])) {
     $sql->execute(array($_POST['nome_servico'],$_POST['valor_servico']));
     $_SESSION['cadastrado'] = 'Inserido com sucesso';
     header("location:cadastro.php");
-    echo $_SESSION['cadastrado'];
 }else{
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }

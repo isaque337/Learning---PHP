@@ -1,5 +1,9 @@
 <?php require_once("../header.php");
 session_start();
+if(isset($_SESSION['cadastrado'])){
+    echo "&nbsp;" . $_SESSION['cadastrado'];
+    $_SESSION['cadastrado']= '';
+}
 ?>
 
 <head>
