@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once('../header.php');
 
 if (isset($_SESSION['cadastrado'])) {
     echo "&nbsp;" . $_SESSION['cadastrado'];
@@ -16,11 +15,21 @@ if (isset($_SESSION['valor_corrompido'])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="pt_br">
+
 <head>
-    <title>Cadastrar Serviço</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title>Cadastrar Serviços</title>
+    <?php include_once('../header.php'); ?>
+    
 </head>
 
+<body>
 
+    <?php include_once('../navbar.php'); ?>
 <br>
 <div class="container">
 
