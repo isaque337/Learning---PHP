@@ -1,6 +1,10 @@
-<?php require_once("header.php"); ?>
+<?php 
+session_start();
+require_once("header.php"); ?>
 
-
+<head>
+    <title>INÍCIO</title>
+</head>
 <br>
     <div class="container-fluid">
 

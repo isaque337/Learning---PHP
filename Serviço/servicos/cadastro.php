@@ -1,8 +1,18 @@
-<?php require_once("../header.php");
+<?php
 session_start();
-if(isset($_SESSION['cadastrado'])){
+require_once('../header.php');
+
+if (isset($_SESSION['cadastrado'])) {
     echo "&nbsp;" . $_SESSION['cadastrado'];
-    $_SESSION['cadastrado']= '';
+    $_SESSION['cadastrado'] = '';
+} else {
+    echo $_SESSION['nao_cadastrado'];
+    $_SESSION['nao_cadastrado'] = '';
+}
+
+if (isset($_SESSION['valor_corrompido'])) {
+    echo $_SESSION['valor_corrompido'];
+    $_SESSION['valor_corrompido'] = '';
 }
 ?>
 
@@ -22,7 +32,6 @@ if(isset($_SESSION['cadastrado'])){
 </div>
 
 <div class="container">
-
     <form action="cadastrar.php" method="POST">
 
         <div class="form-group">
@@ -44,9 +53,7 @@ if(isset($_SESSION['cadastrado'])){
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
             </div>
         </div>
-
     </form>
-
 </div>
 
 

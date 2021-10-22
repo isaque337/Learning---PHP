@@ -1,7 +1,22 @@
-<?php require_once("../header.php"); ?>
+<?php 
+session_start();
+require_once('../header.php');
+
+if (isset($_SESSION['cadastrado'])) {
+    echo "&nbsp;" . $_SESSION['cadastrado'];
+    $_SESSION['cadastrado'] = '';
+}else{
+    echo isset($_SESSION['nao_cadastrado']);
+    $_SESSION['nao_cadastrado'] = '';
+    
+}
+
+?>
+
 <head>
     <title>Cadastrar Cliente</title>
 </head>
+<body>
 
 <br>
 <div class="container">
@@ -15,7 +30,7 @@
 
 <div class="container">
 
-    <form action="" method="POST" name="formulario">
+    <form action="cadastrar.php" method="POST">
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
@@ -47,3 +62,4 @@
 
 
 <?php require_once("../footer.php"); ?>
+</body>
