@@ -10,13 +10,13 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <title>INÍCIO</title>
-    <?php include_once('header.php'); ?>
+    <?php include_once __DIR__ . '/includes/header.php'; ?>
 
 </head>
 
 <body>
 
-    <?php include_once('navbar.php'); ?>
+    <?php include_once __DIR__ .'/includes/navbar.php'; ?>
     <br>
     <div class="container-fluid">
 
@@ -44,7 +44,7 @@ session_start();
 
 
 
-    <?php require_once("footer.php"); ?>
+    <?php include_once __DIR__ . '/includes/footer.php'; ?>
 </body>
 
 </html>

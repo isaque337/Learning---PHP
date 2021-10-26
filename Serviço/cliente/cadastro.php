@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-if (isset($_SESSION['cadastrado'])) {
+if (empty($_SESSION['cadastrado'])) {
     echo "&nbsp;" . $_SESSION['cadastrado'];
     $_SESSION['cadastrado'] = '';
 } else {
-    echo isset($_SESSION['nao_cadastrado']);
+    echo empty($_SESSION['nao_cadastrado']);
     $_SESSION['nao_cadastrado'] = '';
 }
 
@@ -18,14 +18,21 @@ if (isset($_SESSION['cadastrado'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <title>Cadastrar Cliente</title>
-    <?php include_once('../header.php'); ?>
-    
+    <?php include_once __DIR__ . '/../includes/header.php'; ?>
+
 </head>
 
 <body>
+    <?php
 
-    <?php include_once('../navbar.php'); ?>
-    
+    if (isset($_GET['erro'])) {
+        echo 'deu erro <br>' . $_GET['erro'];
+    }
+
+    ?>
+
+    <?php include_once __DIR__ . '/../includes/navbar.php'; ?>
+
     <br>
     <div class="container">
 
@@ -69,5 +76,5 @@ if (isset($_SESSION['cadastrado'])) {
     </div>
 
 
-    <?php require_once("../footer.php"); ?>
+    <?php include_once __DIR__ . '/../includes/footer.php'; ?>
 </body>
