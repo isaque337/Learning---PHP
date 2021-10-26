@@ -74,3 +74,6 @@ if (isset($_SESSION['valor_corrompido'])) {
 
 
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>
+</body>
+
+</html>

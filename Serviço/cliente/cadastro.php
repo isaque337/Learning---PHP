@@ -1,14 +1,6 @@
 <?php
 session_start();
-
-if (empty($_SESSION['cadastrado'])) {
-    echo "&nbsp;" . $_SESSION['cadastrado'];
-    $_SESSION['cadastrado'] = '';
-} else {
-    echo empty($_SESSION['nao_cadastrado']);
-    $_SESSION['nao_cadastrado'] = '';
-}
-
+require __DIR__ . './../vendor/autoload.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -25,9 +17,9 @@ if (empty($_SESSION['cadastrado'])) {
 <body>
     <?php
 
-    if (isset($_GET['erro'])) {
-        echo 'deu erro <br>' . $_GET['erro'];
-    }
+    // if (isset($_GET['erro'])) {
+    //     echo 'deu erro <br>' . $_GET['erro'];
+    // }
 
     ?>
 
@@ -63,7 +55,19 @@ if (empty($_SESSION['cadastrado'])) {
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <input type="hidden" name="status" class="form-control" value="ativo">
+                    <label>Status</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-control">
+                                <input type="radio" name="status" value="ativo" checked> Ativo
+                            </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                            <label class="form-control">
+                                <input type="radio" name="status" value="inativo">Inativo
+                            </label>
+                    </div>
                 </div>
             </div>
 
@@ -78,3 +82,5 @@ if (empty($_SESSION['cadastrado'])) {
 
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>
 </body>
+
+</html>

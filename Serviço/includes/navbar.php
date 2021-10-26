@@ -1,5 +1,5 @@
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
@@ -29,3 +29,5 @@
 
         </div>
     </nav>
+
+    <body class="bg-light">

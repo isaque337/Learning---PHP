@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . './../vendor/autoload.php';
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +39,7 @@ session_start();
 
 
 
-
+            <?php include_once __DIR__ . '/../includes/footer.php'; ?>
 </body>
-<?php include_once __DIR__ . '/../includes/footer.php'; ?>
+
+</html>
