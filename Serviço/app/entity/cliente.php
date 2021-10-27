@@ -1,8 +1,8 @@
 <?php
 
-namespace app\entity;
+namespace App\Entity;
 
-Class nome{
+Class Cliente{
     /**
      * Identificador do cliente
      * @var integer
@@ -23,6 +23,7 @@ Class nome{
 
     /**
      * Status (ativo ou inativo)
-     * @var string
+     * @var string 
      */
+    public $status;
 }
