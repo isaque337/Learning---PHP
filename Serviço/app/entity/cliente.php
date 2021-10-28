@@ -26,4 +26,17 @@ Class Cliente{
      * @var string 
      */
     public $status;
+
+    /**
+     * Método responsável por cadastrar uma vaga no BD
+     */
+    public function cadastrar(){
+        //Inserir o cliente no banco
+
+        //Atribuir o ID na instância
+
+        //Retornar sucesso
+    }
+
 }
+
