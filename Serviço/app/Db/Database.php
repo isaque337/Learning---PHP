@@ -2,6 +2,7 @@
 namespace App\Db;
 
 use \PDO;
+use PDOException;
 
 class Database{
 
@@ -41,19 +42,25 @@ class Database{
     private $connection;
 
     /**
-     * Define a tabela e instância conexão
+     * Define a tabela e instancia a conexão
      * @var string
      */
     public function __construct($table = null){
         $this->table = $table;
-        $this->setConnetion(); 
-    }
+        $this->setConnection(); 
+    }//Pouca valorização em relação ao salário, e muita pressão em cima de mim.
 
     /**
      * Método responsável por criar uma conexão com o banco de dados
      */
     private function setConnection(){
-        
+        try{
+        $this->connection = new PDO('mysql:host=localhost;dbname=brasilcad', 'root' , '');
+
+        }catch(PDOException $e){
+            die('ERROR: '. $e->getMessage());
+            
+        }
          
     }
 
