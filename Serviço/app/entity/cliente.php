@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use \App\Db\Database;
+
 Class Cliente{
     /**
      * Identificador do cliente
@@ -32,10 +34,14 @@ Class Cliente{
      */
     public function cadastrar(){
         //Inserir o cliente no banco
-
-        //Atribuir o ID na instância
-
+        $obDatabase = new Database('cliente');
+        $this->id = $obDatabase->insert([
+                                        'nome'    => $this->nome,
+                                        'cpf'     => $this->cpf,
+                                        'status'  => $this->status
+                                    ]);
         //Retornar sucesso
+        return true;
     }
 
 }
