@@ -39,7 +39,7 @@ Class Cliente{
                                         'nome'    => $this->nome,
                                         'cpf'     => $this->cpf,
                                         'status'  => $this->status
-                                    ]);
+                                       ]);
         //Retornar sucesso
         return true;
     }

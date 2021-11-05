@@ -37,7 +37,23 @@ require __DIR__ . './../vendor/autoload.php';
             </form> -->
 
 
+    <section>
+    
+        <table class = "table">
 
+            <thead></thead>
+
+
+
+
+
+
+
+
+
+        </table>
+
+    </section>
 
 
 
