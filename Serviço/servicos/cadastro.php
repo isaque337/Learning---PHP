@@ -1,18 +1,5 @@
 <?php
 session_start();
-
-if (isset($_SESSION['cadastrado'])) {
-    echo "&nbsp;" . $_SESSION['cadastrado'];
-    $_SESSION['cadastrado'] = '';
-} else {
-    echo $_SESSION['nao_cadastrado'];
-    $_SESSION['nao_cadastrado'] = '';
-}
-
-if (isset($_SESSION['valor_corrompido'])) {
-    echo $_SESSION['valor_corrompido'];
-    $_SESSION['valor_corrompido'] = '';
-}
 ?>
 
 <!DOCTYPE html>

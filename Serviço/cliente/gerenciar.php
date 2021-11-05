@@ -3,7 +3,6 @@ session_start();
 require __DIR__ . './../vendor/autoload.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt_br">
 
@@ -36,9 +35,17 @@ require __DIR__ . './../vendor/autoload.php';
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
             </form> -->
 
-
     <section>
-    
+    <div class="container">
+
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3 h3">
+                <center>
+                    <a href="cadastro.php">
+                        <button class="btn btn-success">Cadastrar Cliente</button>
+                    </a>
+                </center>
+
         <table class = "table">
 
             <thead></thead>
@@ -47,16 +54,9 @@ require __DIR__ . './../vendor/autoload.php';
 
 
 
-
-
-
-
         </table>
 
     </section>
-
-
-
 
 
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>
