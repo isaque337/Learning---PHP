@@ -35,32 +35,40 @@ require __DIR__ . './../vendor/autoload.php';
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
             </form> -->
 
-    <section>
+
     <div class="container">
+        
+        <section>
 
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3 h3">
-                <center>
-                    <a href="cadastro.php">
-                        <button class="btn btn-success">Cadastrar Cliente</button>
-                    </a>
-                </center>
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3 h3">
 
-        <table class = "table">
+                    <table class="table">
 
-            <thead></thead>
-
-
-
-
-
-        </table>
-
-    </section>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOME</th>
+                                <th>CPF</th>
+                                <th>STATUS</th>
+                                <th>ATIVO</th>
+                            </tr>
+                        </thead>
 
 
+
+
+
+                    </table>
+
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>
 
-    </body>
+</body>
 
 </html>
