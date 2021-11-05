@@ -89,8 +89,8 @@ class Database{
     public function insert($values){
 
         //Dados da query
-        $fields = array_keys($values);
-        $binds  = array_pad([],count($fields), '?') ;
+        $fields = array_keys($values); //Recebe os campos em array.
+        $binds  = array_pad([],count($fields), '?') ; //Recebe os valores em array, e apresenta a quantidade de valores do mesmo tamanho de campo.
 
         // Monta a query
         $query = 'INSERT INTO '. $this->table.' ('.implode(',',$fields).') VALUES('.implode(',',$binds).')';
