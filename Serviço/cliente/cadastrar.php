@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . './../vendor/autoload.php';
+include __DIR__ . './../js/config.js';
 
 use App\Entity\Cliente;
 
@@ -16,5 +17,9 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST[
     header('location: cadastro.php?status=success');
     exit;
 }else{
-    header('location: cadastro.php?status=failed');
+    // header('location: cadastro.php?status=failed');
+    echo '<script>
+             function erroCpf();
+         </script>';
+         exit;
 };
