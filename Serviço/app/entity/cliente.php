@@ -30,7 +30,7 @@ Class Cliente{
     public $status;
 
     /**
-     * Método responsável por cadastrar uma vaga no BD
+     * Método responsável por cadastrar um cliente no BD
      */
     public function cadastrar(){
         //Inserir o cliente no banco

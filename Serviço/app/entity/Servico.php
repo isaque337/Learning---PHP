@@ -33,8 +33,8 @@ Class Servico{
      * Método responsável por cadastrar um serviço no BD
      */
     public function cadastrar(){
-        //Inserir o cliente no banco
-        $obDatabase = new Database('cliente');
+        //Inserir o serviço no banco
+        $obDatabase = new Database('servico');
         $this->id = $obDatabase->insert([
                                         'nome'    => $this->nome,
                                         'cpf'     => $this->cpf,
