@@ -1,0 +1,22 @@
+CREATE DATABASE brasilcad;
+
+CREATE TABLE cliente(
+ idcli INT NOT NULL AUTO_INCREMENT,
+ nome VARCHAR(40) NOT NULL,
+ cpf INT NOT NULL,
+ status VARCHAR(7),
+ PRIMARY KEY(ID)
+ );
+ 
+ CREATE TABLE servicos(
+ id INT NOT NULL AUTO_INCREMENT,
+ idcli INT NOT NULL,
+ nome VARCHAR(40) NOT NULL,
+ valor INT NOT NULL,
+ PRIMARY KEY(id),
+ FOREIGN KEY (idcli) REFERENCES cliente (id) 
+ ON DELETE NO ACTION
+ );
+ 
+ SELECT * FROM cliente;
+ SELECT * FROM servicos;
