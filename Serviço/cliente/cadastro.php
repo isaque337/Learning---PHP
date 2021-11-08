@@ -37,13 +37,13 @@ require __DIR__ . './../vendor/autoload.php';
 
     <div class="container">
 
-    <div class="alert alert-warning alert-dismissible fade show" id = "cpf"role="alert">
-        <strong>Oloco, meu!</strong> Olha esse alerta animado, como é chique!
+    <div class="alert alert-danger alert-dismissible fade" id="cpf" role="alert">
+        <strong>Cpf inválido!</strong> Por favor, repita novamente.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    
+
         <form action="cadastrar.php" method="POST">
 
             <div class="form-group">

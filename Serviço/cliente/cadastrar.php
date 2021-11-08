@@ -17,9 +17,11 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST[
     header('location: cadastro.php?status=success');
     exit;
 }else{
-    // header('location: cadastro.php?status=failed');
+    header('location: cadastro.php?status=failed');
     echo '<script>
-             function erroCpf();
-         </script>';
+            $(document).ready(function erroCpf(){
+                document.querySelector("#cpf").classList.add("show");  
+            });
+         </script>'.'teste';
          exit;
 };
