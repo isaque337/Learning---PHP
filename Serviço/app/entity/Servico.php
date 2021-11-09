@@ -29,16 +29,15 @@ Class Servico{
      */
     public $valor_servico;
 
-    /**
-     * Método responsável por cadastrar um serviço no BD
+    
+    /* Método responsável por cadastrar um serviço no BD
      */
     public function cadastrar(){
         //Inserir o serviço no banco
-        $obDatabase = new Database('servico');
+        $obDatabase = new Database('servicos');
         $this->id = $obDatabase->insert([
-                                        'nome'    => $this->nome,
-                                        'cpf'     => $this->cpf,
-                                        'status'  => $this->status
+                                        'nome_servico'  => $this->nome_servico,
+                                        'valor_servico' => $this->valor_servico
                                        ]);
         //Retornar sucesso
         return true;
