@@ -17,10 +17,9 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST[
     header('location: cadastro.php?status=success');
     exit;
 } else {
-    header('location: cadastro.php?status=failed');
-    echo '<script>
-                window.onload = function(){ alert("ok") };
-          </script>';
+    $_GET['status=failed'];
+    header('location: cadastro.php?statusFailed');
+
 
           exit;
 };

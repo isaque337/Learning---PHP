@@ -1,6 +1,11 @@
 <?php
 session_start();
 require __DIR__ . './../vendor/autoload.php';
+if (isset($_GET['statusFailed'])) {
+    echo '<script>
+                console.log("faiiled");
+          </script>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -43,7 +48,7 @@ require __DIR__ . './../vendor/autoload.php';
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        
+
         <form action="cadastrar.php" method="POST">
 
             <div class="form-group">
