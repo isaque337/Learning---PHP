@@ -7,10 +7,12 @@ HELPFY
 		(CLIENTE: Nome , telefone, email, cpf, login e senha)
 		(DIARISTA: Nome, cpf, endereço de atuação, login e senha, Referências anteriores(empresa ou privado)(tempo), experiência profissional, serviços ofertados, locomoção, Valor mínimo(meia diária 60%) sujeito à mudança, agendamento,
 
- - BUSCA DIVIDIDO PELAS CATEGORIAS PRÉ-DEFINIDAS EM UM CAMPO COM FILTROS. (Limpeza geral, lavar roupa, cozinhar) Adicionais deverão ser combinados pelo chat.
-		(Avaliações = https://www.99freelas.com.br/\
+ - BUSCA DIVIDIDO PELAS CATEGORIAS PRÉ-DEFINIDAS EM UM CAMPO COM FILTROS (VALOR, EXPEDIENTE,TEMPO DE EXPERIÊNCIA). (Limpeza geral, lavar roupa, cozinhar) Adicionais deverão ser combinados pelo chat.
+		(Avaliações = https://www.99freelas.com.br/\ (TRABALHOU EM TANTAS CASAS PELO APP) (MÍNIMO + ACRÉSCIMO)
 			     https://www.meajudalimpeza.com.br/
 
+ - ENCONTROU, VISUALIZOU O CURRÍCULO,(COMBINAR SERVIÇOS) = ENCAMINHAR PARA O CHAT PARA TIRAR DÚVIDAS. (POP-UP COM RECIBO DO SERVIÇO PARA CONFIRMAÇÃO)(BOTÃO PARA CONFIRMAR E CANCELAR)
 
 
+- ENDEREÇO NÃO FIXO (FILTRADO PELO CEP E NÚMERO DE CASA) confirmação e enviou.
 

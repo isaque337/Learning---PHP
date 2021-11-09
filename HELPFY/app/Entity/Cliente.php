@@ -9,7 +9,7 @@ Class Cliente{
      * Identificador do cliente
      * @var integer
      */
-    public $id;
+    public $id sdfgsdf
 
     /**
      * Nome do cliente
