@@ -1,11 +1,11 @@
 <?php
 require __DIR__ . './../vendor/autoload.php';
-include __DIR__ . './../js/config.js';
+
 
 use App\Entity\Cliente;
 
 //Validação do formulário 
-$nome_servico = filter_input(INPUT_POST, 'nome');
+$nome = filter_input(INPUT_POST, 'nome');
 
 if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST['cpf'], FILTER_VALIDATE_INT)) {
     $obCliente = new Cliente;
@@ -16,12 +16,12 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST[
 
     header('location: cadastro.php?status=success');
     exit;
-}else{
+} else {
     header('location: cadastro.php?status=failed');
     echo '<script>
-            $(document).ready(function erroCpf(){
-                document.querySelector("#cpf").classList.add("show");  
-            });
-         </script>'.'teste';
-         exit;
+                window.onload = function(){ alert("ok") };
+          </script>';
+
+          exit;
 };
+

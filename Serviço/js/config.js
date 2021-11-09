@@ -1,3 +1,7 @@
-// function erroCpf() {
-//     document.querySelector("#cpf").classList.add('show');
-// }
+function erroCpf() {
+    document.getElementById("cpf").classList.add('show');
+}
+
+function alerta() {
+    alert("teste!");
+}

@@ -37,13 +37,13 @@ require __DIR__ . './../vendor/autoload.php';
 
     <div class="container">
 
-    <div class="alert alert-danger alert-dismissible fade" id="cpf" role="alert">
-        <strong>Cpf inválido!</strong> Por favor, repita novamente.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-
+        <div class="alert alert-danger alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
+            <strong>CPF inválido!&nbsp;</strong>Por favor, repita novamente.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        
         <form action="cadastrar.php" method="POST">
 
             <div class="form-group">
@@ -68,21 +68,21 @@ require __DIR__ . './../vendor/autoload.php';
                             <label class="form-control">
                                 <input type="radio" name="status" value="ativo" checked> Ativo
                             </label>
-                    </div>
+                        </div>
 
-                    <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline">
                             <label class="form-control">
                                 <input type="radio" name="status" value="inativo"> Inativo
                             </label>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
+                <div class="form-group">
+                    <div class="col-md-6 offset-md-3">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
+                    </div>
                 </div>
-            </div>
         </form>
     </div>
 
