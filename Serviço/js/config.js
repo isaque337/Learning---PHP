@@ -5,3 +5,7 @@ function erroCpf() {
 function alerta() {
     alert("teste!");
 }
+
+function successCad() {
+    document.getElementById("sucessCad").classList.add('show');
+}

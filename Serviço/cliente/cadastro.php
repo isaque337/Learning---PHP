@@ -1,10 +1,18 @@
 <?php
 session_start();
 require __DIR__ . './../vendor/autoload.php';
-if (isset($_GET['statusFailed'])) {
+if (isset($_GET['status=failed'])) {
     echo '<script>
-                console.log("failedasdasdasdasd");
+                window.onload = function(){
+                        erroCpf();
+                };
           </script>';
+}else if(isset($_GET['status=success'])){
+    echo '<script>
+            window.onload = function(){
+                successCad();
+            };
+         </script>';
 }
 ?>
 <!DOCTYPE html>
@@ -42,7 +50,14 @@ if (isset($_GET['statusFailed'])) {
 
     <div class="container">
 
-        <div class="alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
+        <div class="alert alert-danger alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
+            <strong>CPF inválido!&nbsp;</strong>Por favor, repita novamente.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="alert alert-danger alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="sucessCad" role="alert">
             <strong>CPF inválido!&nbsp;</strong>Por favor, repita novamente.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
