@@ -1,13 +1,14 @@
 <?php
 session_start();
 require __DIR__ . './../vendor/autoload.php';
+
 if (isset($_GET['status=failed'])) {
     echo '<script>
                 window.onload = function(){
                         erroCpf();
                 };
           </script>';
-}else if(isset($_GET['status=success'])){
+} else if (isset($_GET['status=success'])) {
     echo '<script>
             window.onload = function(){
                 successCad();
@@ -15,6 +16,7 @@ if (isset($_GET['status=failed'])) {
          </script>';
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt_br">
 
@@ -24,17 +26,19 @@ if (isset($_GET['status=failed'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <title>Cadastrar Cliente</title>
     <?php include_once __DIR__ . '/../includes/header.php'; ?>
+    <style>
+        #cpf {
+            display: none !important;
+        }
+
+        #successCad {
+            display: none !important;
+        }
+    </style>
 
 </head>
 
 <body>
-    <?php
-
-    // if (isset($_GET['erro'])) {
-    //     echo 'deu erro <br>' . $_GET['erro'];
-    // }
-
-    ?>
 
     <?php include_once __DIR__ . '/../includes/navbar.php'; ?>
 
@@ -50,15 +54,15 @@ if (isset($_GET['status=failed'])) {
 
     <div class="container">
 
-        <div class="alert alert-danger alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
-            <strong>CPF inválido!&nbsp;</strong>Por favor, repita novamente.
+        <div class="alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
+            <strong>CPF inválido!&nbsp;</strong>Por favor, reescreva novamente.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
 
-        <div class="alert alert-danger alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="sucessCad" role="alert">
-            <strong>CPF inválido!&nbsp;</strong>Por favor, repita novamente.
+        <div class="alert alert-success alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="successCad" role="alert">
+            <strong>Cliente cadastrado com sucesso!</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
