@@ -3,7 +3,7 @@ session_start();
 require __DIR__ . './../vendor/autoload.php';
 if (isset($_GET['statusFailed'])) {
     echo '<script>
-                console.log("faiiled");
+                console.log("failedasdasdasdasd");
           </script>';
 }
 ?>
@@ -42,7 +42,7 @@ if (isset($_GET['statusFailed'])) {
 
     <div class="container">
 
-        <div class="alert alert-danger alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
+        <div class="alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
             <strong>CPF inválido!&nbsp;</strong>Por favor, repita novamente.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
