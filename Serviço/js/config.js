@@ -1,11 +1,9 @@
 function erroCpf() {
-    document.getElementById("cpf").classList.add('show');
+    document.getElementById("cpf").style.borderColor = "black";
+    console.log('display r entrou');
 }
 
 function successCad() {
     document.getElementById("successCad").classList.add('show');
+    console.log('display g entrou');
 }
-
-// if (erroCpf() && successCad() == false) {
-//     $().alert('close');
-// }

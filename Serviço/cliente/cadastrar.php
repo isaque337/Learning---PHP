@@ -18,7 +18,6 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST[
     exit;
 } else {
     header('location: cadastro.php?status=failed');
-
-
+    exit;
 };
 

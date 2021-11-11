@@ -5,7 +5,8 @@ require __DIR__ . './../vendor/autoload.php';
 if (isset($_GET['status=failed'])) {
     echo '<script>
                 window.onload = function(){
-                        erroCpf();
+                    erroCpf();
+                    console.log("teste cpf")
                 };
           </script>';
 } else if (isset($_GET['status=success'])) {
@@ -61,7 +62,7 @@ if (isset($_GET['status=failed'])) {
             </button>
         </div>
 
-        <div class="alert alert-success alert-dismissible fade d-flex justify-content-center col-md-6 offset-md-3" id="successCad" role="alert">
+        <div class="alert alert-success alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3" id="successCad" role="alert">
             <strong>Cliente cadastrado com sucesso!</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
