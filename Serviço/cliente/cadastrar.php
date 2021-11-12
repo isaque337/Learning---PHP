@@ -5,7 +5,6 @@ require __DIR__ . './../vendor/autoload.php';
 use App\Entity\Cliente;
 
 //Validação do formulário 
-$nome = filter_input(INPUT_POST, 'nome');
 
 if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST['cpf'], FILTER_VALIDATE_INT)) {
     $obCliente = new Cliente;
@@ -14,10 +13,10 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST[
     $obCliente->status = $_POST['status'];
     $obCliente->cadastrar();
 
-    header('location: cadastro.php?status=success');
+    header('location: cadastro.php?connection=success');
     exit;
 } else {
-    header('location: cadastro.php?status=failed');
-    exit;
+     header('location: cadastro.php?validation=failed');
+
 };
 

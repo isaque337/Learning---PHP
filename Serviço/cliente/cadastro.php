@@ -2,17 +2,16 @@
 session_start();
 require __DIR__ . './../vendor/autoload.php';
 
-if (isset($_GET['status=failed'])) {
+if (isset($_GET['validation'])) {
     echo '<script>
                 window.onload = function(){
                     erroCpf();
-                    console.log("teste cpf")
                 };
           </script>';
-} else if (isset($_GET['status=success'])) {
+} else if (isset($_GET['connection'])) {
     echo '<script>
-            window.onload = function(){
-                successCad();
+                window.onload = function(){
+                    successCad();
             };
          </script>';
 }
@@ -29,7 +28,7 @@ if (isset($_GET['status=failed'])) {
     <?php include_once __DIR__ . '/../includes/header.php'; ?>
     <style>
         #cpf {
-            display: none !important;
+            display: none;
         }
 
         #successCad {

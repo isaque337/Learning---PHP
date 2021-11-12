@@ -1,9 +1,9 @@
 function erroCpf() {
-    document.getElementById("cpf").style.borderColor = "black";
-    console.log('display r entrou');
+    document.getElementById("cpf").classList.remove('d-flex');
+    console.log('display red entrou');
 }
 
 function successCad() {
     document.getElementById("successCad").classList.add('show');
-    console.log('display g entrou');
+    console.log('display green entrou');
 }

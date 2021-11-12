@@ -79,6 +79,7 @@ class Database{
             
         }
     }
+    
 
     /**
      * Método responsável por inserir dados no banco de dados
