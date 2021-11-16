@@ -2,19 +2,6 @@
 session_start();
 require __DIR__ . './../vendor/autoload.php';
 
-if (isset($_GET['validation'])) {
-    echo '<script>
-                window.onload = function(){
-                    erroCpf();
-                };
-          </script>';
-} else if (isset($_GET['connection'])) {
-    echo '<script>
-                window.onload = function(){
-                    successCad();
-            };
-         </script>';
-}
 ?>
 
 <!DOCTYPE html>
@@ -27,13 +14,7 @@ if (isset($_GET['validation'])) {
     <title>Cadastrar Cliente</title>
     <?php include_once __DIR__ . '/../includes/header.php'; ?>
     <style>
-        #cpf {
-            display: none;
-        }
-
-        #successCad {
-            display: none !important;
-        }
+        
     </style>
 
 </head>
@@ -53,21 +34,12 @@ if (isset($_GET['validation'])) {
     </div>
 
     <div class="container">
-
-        <div class="alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3" id="cpf" role="alert">
-            <strong>CPF inválido!&nbsp;</strong>Por favor, reescreva novamente.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-
-        <div class="alert alert-success alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3" id="successCad" role="alert">
-            <strong>Cliente cadastrado com sucesso!</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-
+        <?php
+        if (isset($_GET['validation'])) {
+            echo $_SESSION['erroCpf'];
+        } else if (isset($_GET['connection'])) {
+            echo $_SESSION['success'];
+        } ?>
         <form action="cadastrar.php" method="POST">
 
             <div class="form-group">
