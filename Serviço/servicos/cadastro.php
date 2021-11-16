@@ -27,14 +27,14 @@ session_start();
         </div>
     </div>
 
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Oloco, meu!</strong> Olha esse alerta animado, como é chique!
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
 
     <div class="container">
+        <?php
+        if (isset($_GET['validation'])) {
+            echo $_SESSION['erroCpf'];
+        } else if (isset($_GET['connection'])) {
+            echo $_SESSION['success'];
+        } ?>
         <form action="cadastrar.php" method="POST">
 
             <div class="form-group">
