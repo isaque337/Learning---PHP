@@ -7,7 +7,7 @@ use App\Entity\Cliente;
 
 //Validação do formulário 
 
-if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST['cpf'], FILTER_VALIDATE_INT)) {
+if (isset($_POST['nome'], $_POST['cpf'], $_POST['status'])) {
     $obCliente = new Cliente;
     $obCliente->nome = $_POST['nome'];
     $obCliente->cpf = $_POST['cpf'];

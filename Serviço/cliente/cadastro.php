@@ -52,7 +52,7 @@ require __DIR__ . './../vendor/autoload.php';
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> CPF</label>
-                    <input type="text" name="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
+                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off"> <!--Verifica se é número e limita a 11 dígitos -->
                 </div>
             </div>
 
@@ -71,14 +71,16 @@ require __DIR__ . './../vendor/autoload.php';
                                 <input type="radio" name="status" value="inativo"> Inativo
                             </label>
                         </div>
+                        
+                        <div class="form-group">
+                            <div class="col-md-6 offset-md-3">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-md-6 offset-md-3">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
-                    </div>
-                </div>
+
         </form>
     </div>
 
