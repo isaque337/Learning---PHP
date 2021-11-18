@@ -47,7 +47,7 @@ session_start();
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Valor</label>
-                    <input type="text" name="valor_servico" class="form-control" placeholder="Digite o valor" required="" autocomplete="off">
+                    <input type="text" maxlength="9" name="valor_servico" id="valor" class="form-control" onkeyup="formatarMoeda()" placeholder="Digite o valor" required="" autocomplete="off">
                 </div>
             </div>
 

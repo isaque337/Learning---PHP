@@ -71,16 +71,11 @@ require __DIR__ . './../vendor/autoload.php';
                                 <input type="radio" name="status" value="inativo"> Inativo
                             </label>
                         </div>
-                        
-                        <div class="form-group">
-                            <div class="col-md-6 offset-md-3">
+                            <div class="inline">
                                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
                             </div>
-                        </div>
                     </div>
                 </div>
-
-
         </form>
     </div>
 
