@@ -1,7 +1,7 @@
 HELPFY
 
 
- - PARTE VISUAL DE SERVIÇOS E INFORMAÇÕES
+ - PARTE VISUAL DE SERVIÇOS E INFORMAÇÕES (visual mais clean com cores neutras e claras)
 
  - CADASTRA INFORMAÇÕES PESSOAIS COM A DIVISÃO DE SETOR (CLIENTE/PRESTADOR) E SÓ.
 		(CLIENTE: Nome , telefone, email, cpf, login e senha)
