@@ -18,27 +18,49 @@ Class Cliente{
     public $nome;
 
     /**
-     * Nome do cpf
+     * Nome do email do cliente
+     * @var string
+     */
+    public $email;
+
+        /**
+     * Nome do telefone
      * @var integer
+     */
+    public $telefone;
+
+    /**
+     * Nome do cpf do cliente
+     * @var string 
      */
     public $cpf;
 
-    /**
-     * Status (ativo ou inativo)
-     * @var string 
+        /**
+     * Nome do login
+     * @var string
      */
-    public $status;
+    public $login;
 
+        /**
+     * Senha do cliente
+     * @var string
+     */
+    public $senha;
     /**
+
+
      * Método responsável por cadastrar um cliente no BD
      */
     public function cadastrar(){
         //Inserir o cliente no banco
         $obDatabase = new Database('cliente');
         $this->id = $obDatabase->insert([
-                                        'nome'    => $this->nome,
-                                        'cpf'     => $this->cpf,
-                                        'status'  => $this->status
+                                        'nome'      => $this->nome,
+                                        'email'     => $this->email,
+                                        'telefone'  => $this->telefone,
+                                        'cpf'       => $this->cpf,
+                                        'login'     => $this->login,
+                                        'senha'     => $this->senha
                                        ]);
         //Retornar sucesso
         return true;

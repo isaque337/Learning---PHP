@@ -15,7 +15,7 @@ class Database{
      * Nome do banco de dados
      * @var string
      */
-    const NAME = 'brasilcad';
+    const NAME = 'helpfy';
 
     /**
      * Usuário do banco
@@ -54,7 +54,7 @@ class Database{
      */
     private function setConnection(){
         try{
-        $this->connection = new PDO('mysql:host=localhost;dbname=brasilcad', 'root' , '');
+        $this->connection = new PDO('mysql:host=localhost;dbname=helpfy', 'root' , '');
         $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);// Retornar erro fatal, caso vá para o catch. Recebe 2 parâmetros, O atributo, depois o valor dele.
 
         }catch(PDOException $e){
