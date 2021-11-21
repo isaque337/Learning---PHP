@@ -15,13 +15,6 @@ require __DIR__ . './../vendor/autoload.php';
 </head>
 
 <body>
-    <?php
-
-    // if (isset($_GET['erro'])) {
-    //     echo 'deu erro <br>' . $_GET['erro'];
-    // }
-
-    ?>
 
     <?php include_once __DIR__ . '/../includes/navbar.php'; ?>
 
@@ -36,14 +29,12 @@ require __DIR__ . './../vendor/autoload.php';
     </div>
 
     <div class="container">
-
-    <div class="alert alert-danger alert-dismissible fade" id="cpf" role="alert">
-        <strong>Cpf inválido!</strong> Por favor, repita novamente.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-
+        <?php
+        if (isset($_GET['validation'])) {
+            echo $_SESSION['erro'];
+        } else if (isset($_GET['connection'])) {
+            echo $_SESSION['success'];  
+        } ?>
         <form action="cadastrar.php" method="POST">
 
             <div class="form-group">
@@ -68,16 +59,16 @@ require __DIR__ . './../vendor/autoload.php';
                             <label class="form-control">
                                 <input type="radio" name="status" value="ativo" checked> Ativo
                             </label>
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
 
-            <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
+                <div class="form-group">
+                    <div class="col-md-6 offset-md-3">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
+                    </div>
                 </div>
-            </div>
         </form>
     </div>
 
