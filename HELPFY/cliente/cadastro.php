@@ -19,6 +19,7 @@ require __DIR__ . './../vendor/autoload.php';
     <?php include_once __DIR__ . '/../includes/navbar.php'; ?>
 
     <br>
+    <br>
     <div class="container">
 
         <div class="form-group">
@@ -30,7 +31,7 @@ require __DIR__ . './../vendor/autoload.php';
 
     <div class="form-group">
             <div class="col-md-6 offset-md-3 h5">
-                <center>Cadastre-se como servidor <a href="trabalhadores.php">aqui!</a></center>
+                <center>Cadastre-se como prestador de serviço <a href="trabalhadores.php">aqui!</a></center>
             </div>
         </div>
     </div>
@@ -83,7 +84,7 @@ require __DIR__ . './../vendor/autoload.php';
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label for="exampleFormControlSelect1">Sexo</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" id="exampleFormControlSelect1" name="sexo">
                         <option>Selecione uma opção</option>
                         <option value="Masculino">Masculino</option>
                         <option value="Feminino">Feminino</option>
@@ -101,8 +102,8 @@ require __DIR__ . './../vendor/autoload.php';
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label for="exampleFormControlSelect1">Estado</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="exampleFormControlSelect1" name="estado">Estado</label>
+                    <select class="form-control" name="estado" id="exampleFormControlSelect1">
                         <option>Selecione uma opção</option>
                         <option value="AC">AC</option>
                         <option value="AL">AL</option>
