@@ -4,15 +4,20 @@ require __DIR__ . './../vendor/autoload.php';
 use App\Entity\Cliente;
 
 //Validação do formulário 
-$telefone = filter_input(INPUT_POST, $POST['telefone'], FILTER_VALIDATE_INT);
-$cpf = filter_input(INPUT_POST, $POST['cpf'], FILTER_VALIDATE_INT);
 
-if (isset($_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['cpf'], $_POST['login'], $_POST['senha']) && $telefone && $cpf) {
+if (isset($_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['cpf'], $_POST['login'], $_POST['senha']))  {
     $obCliente = new Cliente;
     $obCliente->nome = $_POST['nome'];
     $obCliente->email = $_POST['email'];
     $obCliente->telefone = $_POST['telefone'];
     $obCliente->cpf = $_POST['cpf'];
+    $obCliente->sexo = $_POST['sexo'];
+    $obCliente->cidade = $_POST['cidade'];
+    $obCliente->estado = $_POST['estado'];
+    $obCliente->rua = $_POST['rua'];
+    $obCliente->bairro = $_POST['bairro'];
+    $obCliente->cep = $_POST[''];
+    $obCliente->numero_casa = $_POST['numero_casa'];
     $obCliente->login = $_POST['login'];
     $obCliente->senha = $_POST['senha'];
     $obCliente->cadastrar();

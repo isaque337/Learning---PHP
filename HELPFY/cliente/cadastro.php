@@ -33,7 +33,7 @@ require __DIR__ . './../vendor/autoload.php';
         if (isset($_GET['validation'])) {
             echo $_SESSION['erro'];
         } else if (isset($_GET['connection'])) {
-            echo $_SESSION['success'];  
+            echo $_SESSION['success'];
         } ?>
         <form action="cadastrar.php" method="POST">
 
@@ -54,17 +54,43 @@ require __DIR__ . './../vendor/autoload.php';
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Telefone</label>
-                    <input type="text" name="telefone" class="form-control" placeholder="Digite seu número" maxlength="12" required="">
-                    
+                    <input type="number" name="telefone" class="form-control" placeholder="Digite seu número" maxlength="12" required="">
+
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> CPF</label>
                     <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
                 </div>
             </div>
+
+            <!-- <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> sexo</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
+                </div>
+            </div> -->
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label for="exampleFormControlSelect1">Sexo</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label>Bairro</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
+                </div>
+            </div>
+
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
@@ -80,11 +106,11 @@ require __DIR__ . './../vendor/autoload.php';
                 </div>
             </div>
 
-                <div class="form-group">
-                    <div class="col-md-6 offset-md-3">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
-                    </div>
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
                 </div>
+            </div>
         </form>
     </div>
 
