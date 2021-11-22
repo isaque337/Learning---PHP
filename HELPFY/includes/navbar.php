@@ -7,11 +7,11 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Clientes
+                        Entrar
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/Learning-PHP/HELPFY/cliente/cadastro.php">Cadastrar Clientes</a>
-                        <a class="dropdown-item" href="/Learning-PHP/HELPFY/cliente/trabalhadores.php">Cadastrar Trabalhadores</a>
+                        <a class="dropdown-item" href="/Learning-PHP/HELPFY/cliente/cadastro.php">Cadastrar</a>
+                        <a class="dropdown-item" href="/Learning-PHP/HELPFY/cliente/trabalhadores.php">Fazer Login</a>
                         <div class="dropdown-divider"></div>             
                     </div>
                 </li>

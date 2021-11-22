@@ -16,7 +16,7 @@ if (isset($_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['cpf'], $_
     $obCliente->estado = $_POST['estado'];
     $obCliente->rua = $_POST['rua'];
     $obCliente->bairro = $_POST['bairro'];
-    $obCliente->cep = $_POST[''];
+    $obCliente->cep = $_POST['cep'];
     $obCliente->numero_casa = $_POST['numero_casa'];
     $obCliente->complemento = $_POST['complemento'];
     $obCliente->login = $_POST['login'];

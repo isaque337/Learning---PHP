@@ -23,7 +23,14 @@ require __DIR__ . './../vendor/autoload.php';
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3 h3">
-                <center>CADASTRAR CLIENTE</center>
+                <center>CADASTRAR CLIENTE</center><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+            <div class="col-md-6 offset-md-3 h5">
+                <center>Cadastre-se como servidor <a href="trabalhadores.php">aqui!</a></center>
             </div>
         </div>
     </div>
@@ -78,51 +85,51 @@ require __DIR__ . './../vendor/autoload.php';
                     <label for="exampleFormControlSelect1">Sexo</label>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option>Selecione uma opção</option>
-                        <option>Masculino</option>
-                        <option>Feminino</option>
-                        <option>Outros</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outros">Outros</option>
                     </select>
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label>Estado</label>
                     <input type="text" name="uf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
                 </div>
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label for="exampleFormControlSelect1">Estado</label>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option>Selecione uma opção</option>
-                        <option>AC</option>
-                        <option>AL</option>
-                        <option>AP</option>
-                        <option>AM</option>
-                        <option>BA</option>
-                        <option>CE</option>
-                        <option>DF</option>
-                        <option>ES</option>
-                        <option>GO</option>
-                        <option>MA</option>
-                        <option>MT</option>
-                        <option>MG</option>
-                        <option>PA</option>
-                        <option>PB</option>
-                        <option>PR</option>
-                        <option>PE</option>
-                        <option>PI</option>
-                        <option>RJ</option>
-                        <option>RN</option>
-                        <option>RS</option>
-                        <option>RO</option>
-                        <option>RR</option>
-                        <option>SC</option>
-                        <option>SP</option>
-                        <option>SE</option>
-                        <option>TO</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="RR">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
 
                     </select>
                 </div>
