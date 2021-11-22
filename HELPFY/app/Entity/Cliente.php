@@ -55,13 +55,21 @@ Class Cliente{
         //Inserir o cliente no banco
         $obDatabase = new Database('cliente');
         $this->id = $obDatabase->insert([
-                                        'nome'      => $this->nome,
-                                        'email'     => $this->email,
-                                        'telefone'  => $this->telefone,
-                                        'cpf'       => $this->cpf,
-                                        'login'     => $this->login,
-                                        'senha'     => $this->senha
-                                       ]);
+                                        'nome'        => $this->nome,
+                                        'email'       => $this->email,
+                                        'telefone'    => $this->telefone,
+                                        'cpf'         => $this->cpf,
+                                        'sexo'        => $this->sexo,
+                                        'cidade'      => $this->cidade,
+                                        'estado'      => $this->estado,
+                                        'rua'         => $this->rua,
+                                        'bairro'      => $this->bairro,
+                                        'cep'         => $this->cep,
+                                        'numero_casa' => $this->numero_casa, 
+                                        'complemento' => $this->complemento,
+                                        'login'       => $this->login,
+                                        'senha'       => $this->senha,  
+                                    ]);
         //Retornar sucesso
         return true;
     }

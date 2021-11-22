@@ -18,6 +18,7 @@ if (isset($_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['cpf'], $_
     $obCliente->bairro = $_POST['bairro'];
     $obCliente->cep = $_POST[''];
     $obCliente->numero_casa = $_POST['numero_casa'];
+    $obCliente->complemento = $_POST['complemento'];
     $obCliente->login = $_POST['login'];
     $obCliente->senha = $_POST['senha'];
     $obCliente->cadastrar();

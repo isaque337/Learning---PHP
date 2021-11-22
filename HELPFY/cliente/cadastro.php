@@ -77,6 +77,7 @@ require __DIR__ . './../vendor/autoload.php';
                 <div class="col-md-6 offset-md-3">
                     <label for="exampleFormControlSelect1">Sexo</label>
                     <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Selecione uma opção</option>
                         <option>Masculino</option>
                         <option>Feminino</option>
                         <option>Outros</option>
@@ -86,11 +87,52 @@ require __DIR__ . './../vendor/autoload.php';
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label>Bairro</label>
-                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
+                    <label>Estado</label>
+                    <input type="text" name="uf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
                 </div>
             </div>
 
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Cidade</label>
+                    <input type="text" name="cidade" class="form-control" placeholder="Digite a sua cidade" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> CEP</label>
+                    <input type="text" name="cep" class="form-control" placeholder="12345-678" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Rua</label>
+                    <input type="text" name="rua" class="form-control" placeholder="Digite sua rua" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label>Bairro</label>
+                    <input type="text" name="bairro" class="form-control" placeholder="Digite o seu bairro" required="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Número</label>
+                    <input type="text" name="numero_casa" class="form-control" placeholder="ex: 103" required="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Complemento</label>
+                    <input type="text" name="complemento" class="form-control" placeholder="ex: 2° andar B " required="" autocomplete="off">
+                </div>
+            </div>
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
