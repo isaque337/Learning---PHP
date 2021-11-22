@@ -1,17 +1,20 @@
 <?php
 require __DIR__ . './../vendor/autoload.php';
-include __DIR__ . './../js/config.js';
 
 use App\Entity\Cliente;
 
 //Validação do formulário 
-$nome_servico = filter_input(INPUT_POST, 'nome');
+$telefone = filter_input(INPUT_POST, $POST['telefone'], FILTER_VALIDATE_INT);
+$cpf = filter_input(INPUT_POST, $POST['cpf'], FILTER_VALIDATE_INT);
 
-if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST['cpf'], FILTER_VALIDATE_INT)) {
+if (isset($_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['cpf'], $_POST['login'], $_POST['senha']) && $telefone && $cpf) {
     $obCliente = new Cliente;
     $obCliente->nome = $_POST['nome'];
+    $obCliente->email = $_POST['email'];
+    $obCliente->telefone = $_POST['telefone'];
     $obCliente->cpf = $_POST['cpf'];
-    $obCliente->status = $_POST['status'];
+    $obCliente->login = $_POST['login'];
+    $obCliente->senha = $_POST['senha'];
     $obCliente->cadastrar();
 
     $_SESSION['success'] = "<div class='alert alert-success alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='success' role='alert'>
@@ -24,11 +27,12 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status']) && FILTER_VAR($_POST[
     exit;
 }else{
     $_SESSION['erro'] = "<div class='alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='error' role='alert'>
-                                <strong>CPF inválido!&nbsp;</strong>Por favor, reescreva novamente.
+                                <strong>Campos inválidos!&nbsp;</strong>Por favor, reescreva novamente.
                                     <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                         <span aria-hidden='true'>&times;</span>
                                     </button>
                             </div>";
+                        
     header('location: cadastro.php?validation=failed');
     
 };

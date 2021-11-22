@@ -46,23 +46,39 @@ require __DIR__ . './../vendor/autoload.php';
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label> CPF</label>
-                    <input type="text" name="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
+                    <label> Email</label>
+                    <input type="text" name="email" class="form-control" placeholder="Digite seu e-mail" required="" autocomplete="off">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label>Status</label>
-                    <div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-control">
-                                <input type="radio" name="status" value="ativo" checked> Ativo
-                            </label>
-                        </div>
-
-                    </div>
+                    <label> Telefone</label>
+                    <input type="text" name="telefone" class="form-control" placeholder="Digite seu número" maxlength="12" required="">
+                    
                 </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> CPF</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Login</label>
+                    <input type="text" name="login" class="form-control" placeholder="Digite seu login" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Senha</label>
+                    <input type="text" name="senha" class="form-control" placeholder="Digite sua senha" required="" autocomplete="off">
+                </div>
+            </div>
 
                 <div class="form-group">
                     <div class="col-md-6 offset-md-3">
