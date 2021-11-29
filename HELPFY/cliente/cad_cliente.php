@@ -31,7 +31,7 @@ require __DIR__ . './../vendor/autoload.php';
 
     <div class="form-group">
             <div class="col-md-6 offset-md-3 h5">
-                <center>Cadastre-se como prestador de serviço <a href="trabalhadores.php">aqui!</a></center>
+                <center>Cadastre-se como prestador de serviço <a href="cad_trabalhadores.php">aqui!</a></center>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@ require __DIR__ . './../vendor/autoload.php';
         } else if (isset($_GET['connection'])) {
             echo $_SESSION['success'];
         } ?>
-        <form action="cadastrar.php" method="POST">
+        <form action="cadastrar_cliente.php" method="POST">
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
@@ -188,7 +188,7 @@ require __DIR__ . './../vendor/autoload.php';
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Senha</label>
-                    <input type="text" name="senha" class="form-control" placeholder="Digite sua senha" required="" autocomplete="off">
+                    <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" required="" autocomplete="off">
                 </div>
             </div>
 

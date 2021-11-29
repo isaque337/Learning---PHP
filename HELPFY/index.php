@@ -1,6 +1,6 @@
 <?php
 session_start();
-require __DIR__ .'./vendor/autoload.php';
+require __DIR__ . './vendor/autoload.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ require __DIR__ .'./vendor/autoload.php';
 
 <body>
 
-    <?php include_once __DIR__ .'/includes/navbar.php'; ?>
+    <?php include_once __DIR__ . '/includes/navbar.php'; ?>
     <br>
     <div class="container-fluid">
 
@@ -32,7 +32,9 @@ require __DIR__ .'./vendor/autoload.php';
     <div class="row">
         <div class="col-12 h3">
             <center>
-                <p><small class="text-muted">Texto de Boas vindas!</small>
+                <p><small class="text-muted">HelpFY é um intermeio entre sua casa limpa, roupa lavada e aquela comida caseira deliciosa.<br>
+                        Procuramos unir pessoas que procura agilidade, eficiencia e confiabilidade nos afazeres domesticos.<br>
+                        Estamos aqui pra te ajudar . Equipe FY</small>
             </center>
         </div>
     </div>

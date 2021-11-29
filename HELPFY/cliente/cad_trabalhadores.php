@@ -32,10 +32,10 @@ require __DIR__ . './../vendor/autoload.php';
     </div>
 
     <div class="form-group">
-            <div class="col-md-6 offset-md-3 h5">
-                <center>Cadastre-se como cliente <a href="cadastro.php">aqui!</a></center>
-            </div>
+        <div class="col-md-6 offset-md-3 h5">
+            <center>Cadastre-se como cliente <a href="cad_cliente.php">aqui!</a></center>
         </div>
+    </div>
     </div>
 
     <div class="container">
@@ -45,12 +45,12 @@ require __DIR__ . './../vendor/autoload.php';
         } else if (isset($_GET['connection'])) {
             echo $_SESSION['success'];
         } ?>
-        <form action="cadastrar.php" method="POST">
+        <form action="cadastrar_trabalhadores.php" method="POST">
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Nome Completo</label>
-                    <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required="" autocomplete="off">
+                    <input type="text" name="nome" class="form-control" placeholder="Nome completo" required="" autocomplete="off">
                 </div>
             </div>
 
@@ -64,7 +64,7 @@ require __DIR__ . './../vendor/autoload.php';
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Telefone</label>
-                    <input type="number" name="telefone" class="form-control" placeholder="Digite seu número" maxlength="12" required="">
+                    <input type="number" name="telefone" class="form-control" placeholder="ex: (33)90000-0000" maxlength="12" required="">
 
                 </div>
             </div>
@@ -95,74 +95,10 @@ require __DIR__ . './../vendor/autoload.php';
                 </div>
             </div>
 
-            <!-- <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <label>Estado</label>
-                    <input type="text" name="uf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off">
-                </div>
-            </div> -->
-
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label for="exampleFormControlSelect1" name="estado">Estado</label>
-                    <select class="form-control" name="estado" id="exampleFormControlSelect1">
-                        <option>Selecione uma opção</option>
-                        <option value="AC">AC</option>
-                        <option value="AL">AL</option>
-                        <option value="AP">AP</option>
-                        <option value="AM">AM</option>
-                        <option value="BA">BA</option>
-                        <option value="CE">CE</option>
-                        <option value="DF">DF</option>
-                        <option value="ES">ES</option>
-                        <option value="GO">GO</option>
-                        <option value="MA">MA</option>
-                        <option value="MT">MT</option>
-                        <option value="MG">MG</option>
-                        <option value="PA">PA</option>
-                        <option value="PB">PB</option>
-                        <option value="PR">PR</option>
-                        <option value="PE">PE</option>
-                        <option value="PI">PI</option>
-                        <option value="RJ">RJ</option>
-                        <option value="RN">RN</option>
-                        <option value="RS">RS</option>
-                        <option value="RO">RO</option>
-                        <option value="RR">RR</option>
-                        <option value="RR">SC</option>
-                        <option value="SP">SP</option>
-                        <option value="SE">SE</option>
-                        <option value="TO">TO</option>
-
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <label> Cidade</label>
-                    <input type="text" name="cidade" class="form-control" placeholder="Digite a sua cidade" required="" autocomplete="off">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <label> CEP</label>
+                    <label> Seu CEP</label>
                     <input type="text" name="cep" class="form-control" placeholder="12345-678" required="" autocomplete="off">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <label> Rua</label>
-                    <input type="text" name="rua" class="form-control" placeholder="Digite sua rua" required="" autocomplete="off">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <label>Bairro</label>
-                    <input type="text" name="bairro" class="form-control" placeholder="Digite o seu bairro" required="">
                 </div>
             </div>
 
@@ -177,6 +113,47 @@ require __DIR__ . './../vendor/autoload.php';
                 <div class="col-md-6 offset-md-3">
                     <label> Complemento</label>
                     <input type="text" name="complemento" class="form-control" placeholder="ex: 2° andar B " required="" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Cidade de atuação</label>
+                    <input type="text" name="cidade" class="form-control" placeholder="Digite a sua cidade" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label for="exampleFormControlTextarea1">Referências anteriores</label>
+                    <textarea class="form-control" name="ref_anteriores" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label for="exampleFormControlTextarea1">Experiência profissional</label>
+                    <textarea class="form-control" name="exp_prof" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Serviços ofertados</label>
+                    <input type="text" name="oferto" class="form-control" placeholder="Descreva a sua mão de obra" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Valor minímo</label>
+                    <input type="text" name="valor_min" class="form-control" placeholder="Digite um valor de entrada" required="" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label> Dias da semana disponível</label>
+                    <input type="text" name="data" class="form-control" placeholder="Digite a sua cidade" required="" autocomplete="off">
                 </div>
             </div>
 
