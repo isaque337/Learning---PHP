@@ -1,6 +1,6 @@
 <?php
 session_start();
-require __DIR__ .'./vendor/autoload.php';
+require __DIR__ . './vendor/autoload.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +17,9 @@ require __DIR__ .'./vendor/autoload.php';
 
 <body>
 
-    <?php include_once __DIR__ .'/includes/navbar.php'; ?>
+    <?php include_once __DIR__ . '/includes/navbar.php'; ?>
     <br>
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="row">
             <div class="col-12 h3">
@@ -27,19 +27,43 @@ require __DIR__ .'./vendor/autoload.php';
                 <p><small class="text-muted"></small>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-12 h3">
-            <center>
-                <p><small class="text-muted">Texto de Boas vindas!</small>
-            </center>
+        <br>
+        <div class="row">
+            <div class="col-12 h3">
+                <center>
+                    <p><small class="text-muted">Texto de Boas vindas!</small>
+                </center>
+            </div>
         </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/cadastro.jpg" alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/veiculo.jpg" alt="Segundo Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/servico.jpg" alt="Terceiro Slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
     </div>
-    </div>
-
-
-
 
 
 
