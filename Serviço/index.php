@@ -40,6 +40,9 @@ use app\Entity\Cliente;
 
     <?php
         $cliente = Cliente::getClientes();
+
+        $cliente = new Cliente ();
+        $clientes = $cliente->getClientes();        
     ?>
 
     <div class="container">
