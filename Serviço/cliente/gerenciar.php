@@ -38,15 +38,13 @@ require __DIR__ . './../vendor/autoload.php';
 
     <div class="container">
         
-        <section>
-
             <div class="form-group">
-                <div class="col-md-6 offset-md-3 h3">
+                <div class="col-md-6 offset-md-3">
 
-                    <table class="table">
+                    <table class="table bg-secondary mt-3">
 
                         <thead>
-                            <tr>
+                            <tr class="h5">
                                 <th>ID</th>
                                 <th>NOME</th>
                                 <th>CPF</th>
@@ -54,17 +52,15 @@ require __DIR__ . './../vendor/autoload.php';
                                 <th>ATIVO</th>
                             </tr>
                         </thead>
+                        <tbody>
+                        
 
 
-
-
-
+                        </tbody>
                     </table>
 
                 </div>
             </div>
-
-        </section>
 
     </div>
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>

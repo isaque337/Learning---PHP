@@ -8,6 +8,8 @@
 
     <script  type="text/javascript">
         $(".alert").alert();
+
+        $('.carousel').carousel();
        
 	    $(document).ready(function(){
 		    $("#cpf").mask("999.999.999-99");
