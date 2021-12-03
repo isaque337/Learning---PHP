@@ -31,8 +31,8 @@ session_start();
     <div class="container">
         <?php
         if (isset($_GET['validation'])) {
-            echo $_SESSION['erroCpf'];
-        } else if (isset($_GET['connection'])) {
+            echo $_SESSION['erro'];
+        } else if (isset($_GET['success'])) {
             echo $_SESSION['success'];
         } ?>
         <form action="cadastrar.php" method="POST">

@@ -12,6 +12,9 @@ require __DIR__ . './../vendor/autoload.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <title>Gerenciar Cliente</title>
     <?php include_once __DIR__ . '/../includes/header.php'; ?>
+    <style>
+
+    </style>
 
 </head>
 
@@ -88,9 +91,9 @@ require __DIR__ . './../vendor/autoload.php';
                     <label for="exampleFormControlSelect1">Sexo</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="sexo">
                         <option>Selecione uma opção</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Outros">Outros</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outros">Outros</option>
                     </select>
                 </div>
             </div>
@@ -118,14 +121,14 @@ require __DIR__ . './../vendor/autoload.php';
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Cidade de atuação</label>
-                    <input type="text" name="cidade" class="form-control" placeholder="Digite a sua cidade" required="" autocomplete="off">
+                    <input type="text" name="cidade_prefe" class="form-control" placeholder="Digite a sua cidade" required="" autocomplete="off">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label for="exampleFormControlTextarea1">Referências anteriores</label>
-                    <textarea class="form-control" name="ref_anteriores" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="refe_anteriores" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
 

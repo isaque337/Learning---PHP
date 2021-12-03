@@ -64,7 +64,7 @@ Class Trabalhadores{
                                         'cep'         => $this->cep,
                                         'numero_casa' => $this->numero_casa, 
                                         'complemento' => $this->complemento,
-                                        'ref_anteriores' => $this->ref_anteriores,
+                                        'refe_anteriores' => $this->refe_anteriores,
                                         'exp_prof'    => $this->exp_prof,
                                         'oferto'      => $this->oferto,
                                         'valor_min'   => $this->valor_min,
