@@ -1,6 +1,7 @@
 <?php
 session_start();
 require __DIR__ . './../vendor/autoload.php';
+
 use App\Entity\Cliente;
 ?>
 
@@ -36,42 +37,49 @@ use App\Entity\Cliente;
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
             </form> -->
 
-            <?php
-        $clientes = Cliente::getClientes();
-        $resultados = '';
-        foreach($clientes as $cliente){
-            $resultados .=   '<tr>
-                                <td>'.$cliente->id.'</td>
-                                <td>'.$cliente->nome.'</td>
-                                <td>'.$cliente->cpf.'</td>
-                                <td>'.$cliente->status.'</td>
-                                <td></td>
+    <?php
+    $clientes = Cliente::getClientes();
+    $resultados = '';
+    foreach ($clientes as $cliente) {
+        $resultados .=   '<tr>
+                                <td>' . $cliente->id . '</td>
+                                <td>' . $cliente->nome . '</td>
+                                <td>' . $cliente->cpf . '</td>
+                                <td>' . $cliente->status . '</td>
+                                <td>
+                                        <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                                            <option onclick="location.href='editar.php?id='.$cliente->id.''"> Editar </option>
+
+                                            <option onclick="location.href='editar.php?id='.$cliente->id.'">Excluir </option>
+                                        </select>   
+                
+                                </td>
                             </tr>';
-        }
+    }
     ?>
     <div class="container">
-        
-            <div class="form-group">
-                <div class="col-md-6 offset-md-3">
 
-                    <table class="table bg-gradient-success mt-3">
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
 
-                        <thead>
-                            <tr class="h5">
-                                <th>ID</th>
-                                <th>NOME</th>
-                                <th>CPF</th>
-                                <th>STATUS</th>
-                                <th>AÇÕES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?=$resultados?>
-                        </tbody>
-                    </table>
+                <table class="table bg-secondary mt-3">
 
-                </div>
+                    <thead>
+                        <tr class="h5">
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>CPF</th>
+                            <th>STATUS</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?= $resultados ?>
+                    </tbody>
+                </table>
+
             </div>
+        </div>
 
     </div>
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>

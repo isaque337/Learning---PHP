@@ -68,7 +68,7 @@ require __DIR__ . './../vendor/autoload.php';
 
                         <div class="form-check form-check-inline">
                             <label class="form-control">
-                                <input type="radio" name="status" value="inativo"> Inativo
+                                <input type="radio" name="status" value="anativo"> Inativo
                             </label>
                         </div>
                             <div class="inline">
