@@ -1,6 +1,7 @@
 <?php
 session_start();
 require __DIR__ . './../vendor/autoload.php';
+use App\Entity\Cliente;
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +36,25 @@ require __DIR__ . './../vendor/autoload.php';
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
             </form> -->
 
-
+            <?php
+        $clientes = Cliente::getClientes();
+        $resultados = '';
+        foreach($clientes as $cliente){
+            $resultados .=   '<tr>
+                                <td>'.$cliente->id.'</td>
+                                <td>'.$cliente->nome.'</td>
+                                <td>'.$cliente->cpf.'</td>
+                                <td>'.$cliente->status.'</td>
+                                <td></td>
+                            </tr>';
+        }
+    ?>
     <div class="container">
         
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
 
-                    <table class="table bg-secondary mt-3">
+                    <table class="table bg-gradient-success mt-3">
 
                         <thead>
                             <tr class="h5">
@@ -49,13 +62,11 @@ require __DIR__ . './../vendor/autoload.php';
                                 <th>NOME</th>
                                 <th>CPF</th>
                                 <th>STATUS</th>
-                                <th>ATIVO</th>
+                                <th>AÇÕES</th>
                             </tr>
                         </thead>
                         <tbody>
-                        
-
-
+                            <?=$resultados?>
                         </tbody>
                     </table>
 

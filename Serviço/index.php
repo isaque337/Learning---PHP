@@ -1,7 +1,7 @@
 <?php
 session_start();
 require __DIR__ . './vendor/autoload.php';
-use app\Entity\Cliente;
+
 ?>
 
 <!DOCTYPE html>
@@ -37,13 +37,6 @@ use app\Entity\Cliente;
             </div>
         </div>
     </div>
-
-    <?php
-        $cliente = Cliente::getClientes();
-
-        $cliente = new Cliente ();
-        $clientes = $cliente->getClientes();        
-    ?>
 
     <div class="container">
         <!-- <div class ="row">
