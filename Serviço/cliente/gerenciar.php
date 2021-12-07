@@ -47,12 +47,14 @@ use App\Entity\Cliente;
                                 <td>' . $cliente->cpf . '</td>
                                 <td>' . $cliente->status . '</td>
                                 <td>
-                                        <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                                            <option onclick="location.href='editar.php?id='.$cliente->id.''"> Editar </option>
-
-                                            <option onclick="location.href='editar.php?id='.$cliente->id.'">Excluir </option>
-                                        </select>   
-                
+                                    <div class="btn-group">
+                                        <a href="editar.php?id='.$cliente->id.'">
+                                            <button type="button" class="btn btn-light btn-sm">Editar</button>
+                                         </a>&nbsp;
+                                        <a href="excluir.php?id='.$cliente->id.'">
+                                            <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                                        </a>
+                                    </div                                         
                                 </td>
                             </tr>';
     }

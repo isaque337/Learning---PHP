@@ -1,0 +1,40 @@
+<?php
+session_start();
+require __DIR__ . './../vendor/autoload.php';
+
+
+use App\Entity\Cliente;
+
+// if(isset($_GET['id']) or !is_numeric($_GET['id'])){
+//     header('location: ./../index.php?status=error');
+//     exit;
+// }
+
+$obCliente = Cliente::getCliente($_GET['id']);
+echo "<pre>"; print_r($obCliente); echo "</pre>"; exit;
+//Validação do formulário 
+
+if (isset($_POST['nome'], $_POST['cpf'], $_POST['status'])) {
+    $obCliente = new Cliente;
+    $obCliente->nome = $_POST['nome'];
+    $obCliente->cpf = $_POST['cpf'];
+    $obCliente->status = $_POST['status'];
+    $obCliente->cadastrar();
+
+    $_SESSION['success'] = "<div class='alert alert-success alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='success' role='alert'>
+                                <strong>Cliente cadastrado com sucesso!</strong>
+                                    <button type='button' class='close' data-dismiss='alert' aria-label=Close'>
+                                        <span aria-hidden='true'>&times;</span>
+                                    </button>
+                            </div>";
+    header('location: cadastro.php?connection=success');
+    exit;
+} else {
+    $_SESSION['erroCpf'] = "<div class='alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='error' role='alert'>
+                                <strong>CPF inválido!&nbsp;</strong>Por favor, reescreva novamente.
+                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                        <span aria-hidden='true'>&times;</span>
+                                    </button>
+                            </div>";
+    header('location: cadastro.php?validation=failed');
+};

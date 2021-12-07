@@ -57,6 +57,14 @@ Class Cliente{
                                         ->fetchAll(PDO::FETCH_CLASS, self::class);
         
     }
+    /**
+     * Método responsável por buscar uma vaga com base em seu id;
+     * @param integer $id
+     * @return Cliente
+     */
+    public static function getCliente($id){
+        return (new Database('cliente'))->select('id = '.$id);
+    }
 
 }
 
