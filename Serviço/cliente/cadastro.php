@@ -1,5 +1,23 @@
 <?php
-session_start();
+    if(!isset($_SESSION)){ 
+        session_start(); 
+    }
+    else{
+        session_destroy();
+        session_start(); 
+    };
+
+    if(empty(TITLE3)){
+        return true;
+    }else{
+        if(TITLE){
+            define('TITLE','');
+            define('TITLE2','');
+        }
+        define('TITLE','Cadastrar Cliente');
+        define('TITLE2','CADASTRAR CLIENTE');
+    }
+
 require __DIR__ . './../vendor/autoload.php';
 
 ?>
@@ -11,7 +29,7 @@ require __DIR__ . './../vendor/autoload.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <title>Cadastrar Cliente</title>
+    <title><?php if(is_null(TITLE)){echo TITLE3;}else{echo TITLE;};?></title>
     <?php include_once __DIR__ . '/../includes/header.php'; ?>
     <style>
         
@@ -28,7 +46,7 @@ require __DIR__ . './../vendor/autoload.php';
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3 h3">
-                <center>CADASTRAR CLIENTE</center>
+                <center><?php if(is_null(TITLE2)){echo TITLE4;}else{echo TITLE2;}?></center>
             </div>
         </div>
     </div>

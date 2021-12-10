@@ -113,7 +113,7 @@ class Database{
      */
     public function select($where = null, $order = null,$limit = null, $fields = '*'){
         //DADOS DA QUERY 
-        $where = strlen($where) ? 'WHERE'.$where : '';
+        $where = strlen($where) ? 'WHERE '.$where : '';
         $order = strlen($order) ? 'ORDER BY'.$order : '';
         $limit = strlen($limit) ? 'LIMIT'.$limit : '';
 
