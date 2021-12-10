@@ -42,16 +42,16 @@ use App\Entity\Cliente;
     $resultados = '';
     foreach ($clientes as $cliente) {
         $resultados .=   '<tr>
-                                <td>' . $cliente->id . '</td>
-                                <td>' . $cliente->nome . '</td>
-                                <td>' . $cliente->cpf . '</td>
-                                <td>' . $cliente->status . '</td>
+                                <td>'.$cliente->id.'</td>
+                                <td>'.$cliente->nome.'</td>
+                                <td>'.$cliente->cpf.'</td>
+                                <td>'.$cliente->status.'</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="editar.php?id='.$cliente->id.'">
+                                        <a href="editar_cliente.php?id=' .$cliente->id.'">
                                             <button type="button" class="btn btn-light btn-sm">Editar</button>
                                          </a>&nbsp;
-                                        <a href="excluir.php?id='.$cliente->id.'">
+                                        <a href="excluir_cliente.php?id=' .$cliente->id.'">
                                             <button type="button" class="btn btn-danger btn-sm">Excluir</button>
                                         </a>
                                     </div                                         

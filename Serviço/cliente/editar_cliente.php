@@ -5,12 +5,13 @@ require __DIR__ . './../vendor/autoload.php';
 
 use App\Entity\Cliente;
 
-// if(isset($_GET['id']) or !is_numeric($_GET['id'])){
+// Validação do ID
+// if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
 //     header('location: ./../index.php?status=error');
-//     exit;
+//     exit;  
 // }
 
-$obCliente = Cliente::getCliente($_GET['id']);
+$obCliente = Cliente::getCliente($_GET['sid']);
 echo "<pre>"; print_r($obCliente); echo "</pre>"; exit;
 //Validação do formulário 
 
