@@ -124,4 +124,24 @@ class Database{
         return $this->execute($query);
     }
 
+
+    /**
+     * Método responsável por executar ataulizações no BD
+     * @param string $where
+     * @param string array $values [ field => value ]
+     * @return boolean
+     */
+    public function update($where, $values){
+        //DADOS DA QUERY
+        $fields =  array_keys($values);
+
+        //MONTA A QUERY
+        $query = 'UPDATE ' .$this->table.' SET '.implode('=?,', $fields).'=? WHERE '.$where;
+
+        //EXECUTAR A QUERY
+
+        $this->execute($query,array_values($values));
+        return true;
+    }
+
 }

@@ -1,7 +1,16 @@
 <?php
-session_start(); 
+
+    if(!isset($_SESSION)){ 
+        session_start(); 
+    }
+    else{
+        session_destroy();
+        session_start(); 
+    };
 
 require __DIR__ . './../vendor/autoload.php';
+
+use App\Entity\Cliente;
 
 ?>
 
@@ -12,7 +21,7 @@ require __DIR__ . './../vendor/autoload.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <title>Cadastrar Cliente</title>
+    <title>Editar Cliente</title>
     <?php include_once __DIR__ . '/../includes/header.php'; ?>
 
 </head>
@@ -26,7 +35,7 @@ require __DIR__ . './../vendor/autoload.php';
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3 h3">
-                <center>CASDASTRAR CLIENTE</center>
+                <center>EDITAR CLIENTE</center>
             </div>
         </div>
     </div>
@@ -38,19 +47,19 @@ require __DIR__ . './../vendor/autoload.php';
         } else if (isset($_GET['connection'])) {
             echo $_SESSION['success'];
         } ?>
-        <form action="cadastrar.php" method="POST">
+        <form method="POST">
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Nome Completo</label>
-                    <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required="" autocomplete="off">
+                    <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required="" autocomplete="off" value="<?=$obCliente->nome?>">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> CPF</label>
-                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off"> <!--Verifica se é número e limita a 11 dígitos -->
+                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off" value="<?=$obCliente->cpf?>"> <!--Verifica se é número e limita a 11 dígitos -->
                 </div>
             </div>
 
@@ -66,7 +75,7 @@ require __DIR__ . './../vendor/autoload.php';
 
                         <div class="form-check form-check-inline">
                             <label class="form-control">
-                                <input type="radio" name="status" value="inativo"> Inativo
+                                <input type="radio" name="status" value="inativo" <?=$obCliente->status == 'inativo' ? 'checked' : ''?>> Inativo
                             </label>
                         </div>
                             <div class="inline">

@@ -61,6 +61,12 @@ use App\Entity\Cliente;
     }
     ?>
     <div class="container">
+    <?php
+        if (isset($_GET['validation'])) {
+            echo $_SESSION['error'];
+        } else if (isset($_GET['connection'])) {
+            echo $_SESSION['success'];
+        } ?>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">

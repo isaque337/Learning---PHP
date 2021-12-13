@@ -2,8 +2,6 @@
 session_start();
 require __DIR__ . './../vendor/autoload.php';
 
-define('TITLE','CADASTRAR CLIENTE');
-
 use App\Entity\Cliente;
 
 //Validação do formulário 
