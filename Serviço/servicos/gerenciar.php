@@ -55,7 +55,7 @@ use App\Entity\Servico;
     }
     ?>
 
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">

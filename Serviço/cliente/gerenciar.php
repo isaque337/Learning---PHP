@@ -59,8 +59,15 @@ use App\Entity\Cliente;
                                 </td>
                             </tr>';
     }
+
+    $resultados = strlen($resultados) ? $resultados : '<tr>
+                                                            <td colspan ="5" class="text-center">
+                                                                Nenhum Cliente encontrado
+                                                            </td>       
+                                                      </tr>';
+
     ?>
-    <div class="container">
+    <div class="container-fluid">
     <?php
         if (isset($_GET['validation'])) {
             echo $_SESSION['error'];

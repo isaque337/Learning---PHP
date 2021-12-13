@@ -141,6 +141,25 @@ class Database{
         //EXECUTAR A QUERY
 
         $this->execute($query,array_values($values));
+
+        //RETORNA TRUE
+        return true;
+    }
+
+    /**
+     * Método responsável por excluir um cliente no BD
+     * @param string $where
+     * @return boolean
+     */
+    public function delete($where){
+
+        //MONTA DA QUERY
+        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+
+        //EXECUTA A QUERY
+        $this->execute($query);
+
+        //RETORNA SUCESSO
         return true;
     }
 

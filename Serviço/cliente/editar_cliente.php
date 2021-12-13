@@ -31,7 +31,7 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status'])) {
     
 
     $_SESSION['success'] = "<div class='alert alert-success alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='success' role='alert'>
-                                <strong>Cliente editado com sucesso com sucesso!</strong>
+                                <strong>Cliente editado com sucesso!</strong>
                                     <button type='button' class='close' data-dismiss='alert' aria-label=Close'>
                                         <span aria-hidden='true'>&times;</span>
                                     </button>
