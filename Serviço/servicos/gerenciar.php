@@ -53,12 +53,26 @@ use App\Entity\Servico;
                                 </td>
                             </tr>';
     }
+
+    $resultados = strlen($resultados) ? $resultados : '<tr>
+                                                            <td colspan ="5" class="text-center">
+                                                                Nenhum Cliente encontrado
+                                                            </td>       
+                                                        </tr>';
+
     ?>
 
     <div class="container-fluid">
 
         <div class="form-group">
+        <?php
+                if (isset($_GET['validation'])) {
+                    echo $_SESSION['error'];
+                } else if (isset($_GET['connection'])) {
+                    echo $_SESSION['success'];
+                } ?>
             <div class="col-md-6 offset-md-3">
+
 
                 <table class="table bg-secondary mt-3">
 
@@ -86,10 +100,6 @@ use App\Entity\Servico;
             </form>
 
  -->
-
-
-
-
 
 
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>

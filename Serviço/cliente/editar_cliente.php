@@ -2,7 +2,6 @@
 session_start();
 require __DIR__ . './../vendor/autoload.php';
 
-
 use App\Entity\Cliente;
 
 // Validação do ID
