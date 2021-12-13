@@ -2,8 +2,7 @@
 session_start();
 require __DIR__ . './../vendor/autoload.php';
 
-define('TITLE','Cadastrar Cliente');
-define('TITLE2','CADASTRAR CLIENTE');
+define('TITLE','CADASTRAR CLIENTE');
 
 use App\Entity\Cliente;
 

@@ -63,7 +63,8 @@ Class Cliente{
      * @return Cliente
      */
     public static function getCliente($id){
-        return (new Database('cliente'))->select('id = '.$id);
+        return (new Database('cliente'))->select('id = ' .$id)
+                                        ->fetchObject(self::class);
     }
 
 }

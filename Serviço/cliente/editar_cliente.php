@@ -2,8 +2,7 @@
 session_start();
 require __DIR__ . './../vendor/autoload.php';
 
-define('TITLE3','Editar Cliente');
-define('TITLE4','EDITAR CLIENTE');
+define('TITLE','EDITAR CLIENTE');
 
 use App\Entity\Cliente;
 
@@ -13,6 +12,7 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
     exit;  
 }
 
+//CONSULTA O CLIENTE
 $obCliente = Cliente::getCliente($_GET['id']);
 
 // Validação da vaga

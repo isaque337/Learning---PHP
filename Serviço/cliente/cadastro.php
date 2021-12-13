@@ -7,17 +7,6 @@
         session_start(); 
     };
 
-    if(empty(TITLE3)){
-        return true;
-    }else{
-        if(TITLE){
-            define('TITLE','');
-            define('TITLE2','');
-        }
-        define('TITLE','Cadastrar Cliente');
-        define('TITLE2','CADASTRAR CLIENTE');
-    }
-
 require __DIR__ . './../vendor/autoload.php';
 
 ?>
@@ -29,11 +18,8 @@ require __DIR__ . './../vendor/autoload.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <title><?php if(is_null(TITLE)){echo TITLE3;}else{echo TITLE;};?></title>
+    <title><?=TITLE?></title>
     <?php include_once __DIR__ . '/../includes/header.php'; ?>
-    <style>
-        
-    </style>
 
 </head>
 
@@ -46,7 +32,7 @@ require __DIR__ . './../vendor/autoload.php';
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3 h3">
-                <center><?php if(is_null(TITLE2)){echo TITLE4;}else{echo TITLE2;}?></center>
+                <center><?=TITLE?></center>
             </div>
         </div>
     </div>
@@ -63,14 +49,14 @@ require __DIR__ . './../vendor/autoload.php';
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> Nome Completo</label>
-                    <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required="" autocomplete="off">
+                    <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required="" autocomplete="off" value="<?$obCliente->nome?>">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label> CPF</label>
-                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off"> <!--Verifica se é número e limita a 11 dígitos -->
+                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu CPF" required="" autocomplete="off" value="<?=$obCliente->cpf?>"> <!--Verifica se é número e limita a 11 dígitos -->
                 </div>
             </div>
 

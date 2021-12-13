@@ -1,3 +1,6 @@
+<?php 
+define('TITLE','CADASTRAR CLIENTE');
+?>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
