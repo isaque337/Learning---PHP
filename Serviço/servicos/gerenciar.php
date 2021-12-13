@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+require __DIR__ . './../vendor/autoload.php';
+
+use App\Entity\Servico;
 ?>
 
 
@@ -29,7 +33,52 @@ session_start();
         </div>
     </div>
 
+    <?php
+    $servicos = Servico::getServicos();
+    $resultados = '';
+    foreach ($servicos as $servico) {
+        $resultados .=   '<tr>
+                                <td>' . $servico->id . '</td>
+                                <td>' . $servico->nome_servico . '</td>
+                                <td>' . $servico->valor_servico . '</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="editar_servico.php?id=' . $servico->id . '">
+                                            <button type="button" class="btn btn-light btn-sm">Editar</button>
+                                         </a>&nbsp;
+                                        <a href="excluir_servico.php?id=' . $servico->id . '">
+                                            <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                                        </a>
+                                    </div                                         
+                                </td>
+                            </tr>';
+    }
+    ?>
 
+    <div class="container">
+
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+
+                <table class="table bg-secondary mt-3">
+
+                    <thead>
+                        <tr class="h5">
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>VALOR</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?= $resultados ?>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
     <!-- 
 <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
@@ -45,6 +94,6 @@ session_start();
 
     <?php include_once __DIR__ . '/../includes/footer.php'; ?>
 
-    </body>
+</body>
 
 </html>
