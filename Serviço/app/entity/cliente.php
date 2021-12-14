@@ -45,6 +45,27 @@ Class Cliente{
         return true;
     }
 
+    /**
+     * Método responsável por atualizar um cliente no BD
+     * @return boolean
+     */
+    public function atualizar(){
+        return (new Database('cliente'))->update('id = ' .$this->id,[
+                                                                        'nome'    => $this->nome,
+                                                                        'cpf'     => $this->cpf,
+                                                                        'status'  => $this->status
+        ]);
+    }
+
+
+    /**
+     * Método responsável por excluir um cliente no BD
+     * @return boolean
+     */
+    public function excluir(){
+        return (new Database('cliente'))->delete('id = '. $this->id);
+    }
+
      /**
       * Método responsável por obter as vagas do banco de dados
       * @param string where
@@ -67,5 +88,5 @@ Class Cliente{
                                         ->fetchObject(self::class);
     }
 
+    
 }
-

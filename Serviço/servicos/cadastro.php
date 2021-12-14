@@ -32,7 +32,7 @@ session_start();
         <?php
         if (isset($_GET['validation'])) {
             echo $_SESSION['erro'];
-        } else if (isset($_GET['success'])) {
+        } else if (isset($_GET['connection'])) {
             echo $_SESSION['success'];
         } ?>
         <form action="cadastrar.php" method="POST">

@@ -17,7 +17,7 @@ if (isset($_POST['nome_servico'], $_POST['valor_servico']) && $_POST['valor_serv
                                         <span aria-hidden='true'>&times;</span>
                                     </button>
                             </div>";
-    header('location: cadastro.php?status=success');
+    header('location: gerenciar.php?connection=success');
     exit;
 } else {
     $_SESSION['erro'] = "<div class='alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='error' role='alert'>
