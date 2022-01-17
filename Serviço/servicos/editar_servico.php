@@ -24,10 +24,10 @@ if(!$obServico instanceof Servico){
 //Validação do formulário 
 
 if (isset($_POST['nome_servico'], $_POST['valor_servico']) && $_POST['valor_servico']!==0) {
-
     $obServico->nome_servico = $_POST['nome_servico'];
     $obServico->valor_servico = $_POST['valor_servico'];
-    $obServico->atualizar();
+    $obServico->atualizar(); 
+    
 
     $_SESSION['success'] = "<div class='alert alert-success alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='success' role='alert'>
                                 <strong>Serviço editado com sucesso!</strong>
@@ -37,7 +37,8 @@ if (isset($_POST['nome_servico'], $_POST['valor_servico']) && $_POST['valor_serv
                             </div>";
     header('location: gerenciar.php?connection=success');
     exit;
-}else {
+}
+else {
     $_SESSION['error'] = "<div class='alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='error' role='alert'>
                                 <strong>Valor inválido!&nbsp;</strong>Por favor, reescreva novamente.
                                     <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
