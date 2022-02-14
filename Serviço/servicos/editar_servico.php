@@ -13,9 +13,7 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
 //CONSULTA O CLIENTE
 $obServico = Servico::getServico($_GET['id']);
 
-/**
- * 
- */
+// Validação do serviço
 if(!$obServico instanceof Servico){
     header('location: ./../index.php?status=error');
     exit;
@@ -38,15 +36,17 @@ if (isset($_POST['nome_servico'], $_POST['valor_servico']) && $_POST['valor_serv
     header('location: gerenciar.php?connection=success');
     exit;
 }
-else {
-    $_SESSION['error'] = "<div class='alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='error' role='alert'>
-                                <strong>Valor inválido!&nbsp;</strong>Por favor, reescreva novamente.
-                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                        <span aria-hidden='true'>&times;</span>
-                                    </button>
-                            </div>";
-    header('location: gerenciar.php?validation=failed');
-}
-
+// else {
+//     $_SESSION['error'] = "<div class='alert alert-danger alert-dismissible fade show d-flex justify-content-center col-md-6 offset-md-3' id='error' role='alert'>
+//                                 <strong>Valor inválido!&nbsp;</strong>Por favor, reescreva novamente.
+//                                     <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+//                                         <span aria-hidden='true'>&times;</span>
+//                                     </button>
+//                             </div>";
+//     header('location: gerenciar.php?validation=failed');
+// }
+// Colocar else de, se não foi alterado nenhum campo, voltar com uma info de nada alterado.
+// Colocar else de, se no nome do serviço estiver com número = validation failed.
+//
 
 include_once __DIR__ . '/cadastrado.php';

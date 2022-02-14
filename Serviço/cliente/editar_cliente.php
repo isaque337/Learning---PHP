@@ -13,7 +13,7 @@ if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
 //CONSULTA O CLIENTE
 $obCliente = Cliente::getCliente($_GET['id']);
 
-// Validação da vaga
+// Validação do cliente
 if(!$obCliente instanceof Cliente){
     header('location: ./../index.php?status=error');
     exit;
@@ -38,5 +38,8 @@ if (isset($_POST['nome'], $_POST['cpf'], $_POST['status'])) {
     header('location: gerenciar.php?connection=success');
     exit;
 }
+//Colocar validador de CPF
+//Colocar else de, caso não tenha alteração, informar não alterado.
+//Colocar else de, caso tenha número no nome, validation failed.
 
 include_once __DIR__ . '/cadastrado.php';
