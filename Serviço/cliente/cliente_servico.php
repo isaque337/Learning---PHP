@@ -1,6 +1,25 @@
+<!-- <script>
+     $(document).ready(function(e) {
+         $("#buscaRapida").on('click', function(e) {
+             var cod_veiculo = $('[name="cod_veiculo"]').val();
+             var acao = $('*[name=acao] option:selected').val();
+             console.log(acao);
+             if (cod_veiculo) {
+                 $('#formBuscaRapida').attr('action', acao).submit();
+             } else {
+                 alert('O Veículo deve ser selecionado !');
+             }
+         });
+     } -->
+<!-- </script> -->
 <?php
-session_start();
 require __DIR__ . './../vendor/autoload.php';
+// namespace App\Db;
+// session_start();
+// use PDOException;
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +47,37 @@ require __DIR__ . './../vendor/autoload.php';
         </div>
     </div>
 
-    <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-            </form> -->
+    <form class="form-inline my-2 my-lg-0">
+    <div class="input-group">
+
+        <select name="cliente" class="form-control mr-sm-2 type="search" placeholder="Digite o nome do cliente">
+                                            <option></option>
+                                            <?php
+
+                                            try {
+                                                $result = $pdo->prepare("select nome, id from cliente");
+                                                $result->execute();
+                                                while ($row = $result->fetch()) {
+                                                    echo "<option value={$row['id']}>{$row['nome']}</option>";
+                                                }
+                                            } catch (PDOException $e) {
+                                                echo "Erro ao consultar regiões";
+                                            }
+
+                                            ?>
+                                        </select>
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+
+    </div>
+            </form>
+        
+        <?php
 
 
+
+
+
+        ?>
 
 
 

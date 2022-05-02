@@ -67,7 +67,7 @@ Class Cliente{
     }
 
      /**
-      * Método responsável por obter as vagas do banco de dados
+      * Método responsável por obter os clientes do banco de dados
       * @param string where
       * @param string $order
       * @param string limit
@@ -79,7 +79,7 @@ Class Cliente{
         
     }
     /**
-     * Método responsável por buscar uma vaga com base em seu id;
+     * Método responsável por buscar um cliente com base em seu id;
      * @param integer $id
      * @return Cliente
      */
